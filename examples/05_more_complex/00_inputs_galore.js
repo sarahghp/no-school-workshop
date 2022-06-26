@@ -21,17 +21,17 @@ resetAll()
 // in our last example, we looked at modulation based on other output buffers
 // one of my favorite sources to use is the external screen
 
-s0.initScreen();
+s0.initScreen(2);
 
 src(s0).out(o0)
 
 src(s0)
   .modulateKaleid(osc(110,0.5,0),2)
 .out()
-
+speed = .5
 src(s0)
   .modulateRotate(osc(11,0.5,0),2)
-  .modulateKaleid(src(s0))
+  .modulateScale(src(s0).rotate(30, 1).scale(40))
 .out()
 
 render(o0);

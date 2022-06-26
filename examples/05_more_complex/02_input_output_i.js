@@ -37,5 +37,7 @@ src(o1)
     .blend(src(o2))
 	.scrollX(() => -time * .06)
 	.blend(solid(0, 0, 1))
-    .layer(src(o0).scale(2).mask(shape(4,0.5,0).scrollX(() => time * .6).scale(.4).repeat(3)).invert([0, 0, 0, 0.2]))
+    // .layer(src(o0).scale(2).mask(shape(4,0.5,0).scrollX(() => time * .6).scale(.4).repeat(3)).invert([0, 0, 0, 0.2]))
 	.out(o0);
+
+render(o1)
